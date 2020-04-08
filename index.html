@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+    <!-- 实现Rem值的运算 -->
+    <script>
+        function refreshRem() {
+            var desW = 640,
+                winW = document.documentElement.clientWidth || document.body.clientWidth;
+            ratio = winW / desW;
+            document.documentElement.style.fontSize = ratio * 100 + 'px';
+        }
+        refreshRem();
+        window.addEventListener('resize', refreshRem);
+    </script>
+</head>
+
+<body>
+    <header class="clear">
+        <img src="./img/logo.jpg" alt="">
+        <span>光翼生活</span>
+        <div>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+    <section class="banner">
+        <div class="active"></div>
+        <a href="javascript:;" class="leftBtn">左</a>
+        <a href="javascript:;" class="rightBtn">右</a>
+    </section>
+    <section class="videoDame">
+        <video src="./vedio/16.MP4" controls></video>
+    </section>
+    <!-- <div class="text"></div> -->
+    <audio src="./audio/courage.mp3" controls></audio>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
